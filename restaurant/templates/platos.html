@@ -1,0 +1,13 @@
+{% extends 'nav.html' %}
+
+
+{% block content %}
+<h1>platos</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor mollitia praesentium aliquam consequuntur, veniam optio velit consequatur dolorum fuga laborum sequi animi nemo consectetur maxime nihil fugit, voluptas deserunt. Enim dolores numquam culpa animi, iusto nostrum doloremque placeat omnis provident velit sapiente reprehenderit ipsa inventore temporibus molestias eveniet deserunt ipsum totam distinctio quo corrupti! Maxime, recusandae vitae? Assumenda corrupti incidunt adipisci voluptatum atque ducimus magni, optio blanditiis mollitia libero repellat praesentium. Reiciendis nihil natus sit iusto necessitatibus illum rerum eius consectetur distinctio dolores id magnam molestias voluptas ut modi, in autem fuga eos vero omnis repellendus quae neque ab.</p>
+{% for plato in platos %}
+<h1>{{plato.nombre}}</h1>
+<p>{{plato.description}}</p>
+<p>Producto: {{plato.producto.id}}</p>
+{% endfor %}
+
+{% endblock %}
