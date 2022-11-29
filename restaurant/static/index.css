@@ -1,0 +1,47 @@
+h1 {
+    color: #42474B;
+    font-size:100px;
+    margin-right: 15px;
+} 
+
+p {
+    color: #42474B;
+    font-size: 16px;
+    padding: 25px;
+}
+
+h2 {
+    color:#277E9B;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.container_main{
+  width: 100%;
+  height: 100%;
+  margin-top: -25px;
+  display: flex;
+  justify-content: center;
+  background-color: #C3CCD0;
+}
+.container_princ{
+    width: 70%;
+    padding: 10px;
+    display: inline-block;
+}
+.container_rappi_title{
+    background-color: #E8EFF5;
+    height: 200px;
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.container_rappi_body{
+    margin-top: 50px;
+    background-color: #E8EFF5;
+    border-radius: 15px;
+}

@@ -1,6 +1,25 @@
 {% extends 'nav.html' %}
 
 {% block content %}
-<h1>{{title}}</h1>
+
+{% load static %}
+  <link rel="stylesheet" href="{% static 'index.css' %}">
+
+<div class="container_main">
+    <div class="container_princ">
+        <div class="container_rappi_title">
+            <h1>RapiFood</h1>
+            <img src="{% static '4366942.png' %}" width="100" height="100"  />
+        </div>
+    
+        <div class="container_rappi_body">
+            <h2>¡Bienvenidos a RapiFood!</h2>
+            <p>Bienvenido a RapiFood. Estamos felices de que estés aquí. Fundamos RapiFood porque queríamos crear un espacio confiable e inspirador con todo lo que necesitas para alimentarte y vivir bien (y, aceptémoslo, porque realmente nos gusta la comida peruana). Esperamos que navegues por horas en nuestras recetas, tutoriales y hallazgos, y queremos agradecer tu suscripción con un descuento de $10 en compras de $50 o más. Simplemente ingresa el código BIENVENIDA10 antes de pagar»</p>
+        </div>
+       
+    </div>
+</div>
+
+
 {% endblock %}
 
