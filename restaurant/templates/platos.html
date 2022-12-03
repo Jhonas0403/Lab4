@@ -1,13 +1,34 @@
 {% extends 'nav.html' %}
-
-
 {% block content %}
-<h1>platos</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor mollitia praesentium aliquam consequuntur, veniam optio velit consequatur dolorum fuga laborum sequi animi nemo consectetur maxime nihil fugit, voluptas deserunt. Enim dolores numquam culpa animi, iusto nostrum doloremque placeat omnis provident velit sapiente reprehenderit ipsa inventore temporibus molestias eveniet deserunt ipsum totam distinctio quo corrupti! Maxime, recusandae vitae? Assumenda corrupti incidunt adipisci voluptatum atque ducimus magni, optio blanditiis mollitia libero repellat praesentium. Reiciendis nihil natus sit iusto necessitatibus illum rerum eius consectetur distinctio dolores id magnam molestias voluptas ut modi, in autem fuga eos vero omnis repellendus quae neque ab.</p>
-{% for plato in platos %}
-<h1>{{plato.nombre}}</h1>
-<p>{{plato.description}}</p>
-<p>Producto: {{plato.producto.id}}</p>
-{% endfor %}
+    <head>
+        <title>Lista de Platos</title>
+    </head>
+
+    <body>
+        <h1>Platos</h1>
+        <p>En esta sección se <muestra></muestra> una lista de todos los platos y sus ingredientes.</p>
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Productos</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for plato in platos %}
+                <tr>
+                  <th scope="row">{{ plato.id }}</th>
+                  <td>{{ plato.nombre }}</td>
+                  <td>{{ plato.description }}</td>
+                  <td>{{ plato.precio }}</td>
+                  <td>{{ plato.producto.all|join:", " }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
 
 {% endblock %}

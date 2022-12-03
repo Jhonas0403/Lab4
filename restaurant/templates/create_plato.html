@@ -1,7 +1,26 @@
 {% extends 'nav.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
+    <head>
+        <title>Formulario Platos</title>
+        <!-- CSS only -->
 
-<h1>Nuevo Plato</h1>
+    </head>
 
+    <body>
+
+        <form action="/crear_plato/" method="post">
+            <div class="form-row">
+                <div class="col">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="col">
+                </div>
+            </div>
+        </form>
+
+    </body>
 {% endblock %}

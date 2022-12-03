@@ -1,8 +1,29 @@
 {% extends 'nav.html' %}
 
 {% block content %}
-<h1>product</h1>
-{% for project in productos %}
-<h1>{{project.name}}</h1>
-{% endfor %}
+    <head>
+        <title>Lista de Productos</title>
+    </head>
+    <body>
+        <h1>Productos</h1>
+        <p>En esta sección se muestra toda una lista de ingredientes o productos.</p>
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in productos %}
+                <tr>
+                  <th scope="row">{{ product.id }}</th>
+                  <td>{{ product.name }}</td>
+                  <td>{{ product.description }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
 {% endblock %}
