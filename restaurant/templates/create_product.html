@@ -1,0 +1,26 @@
+{% extends 'nav.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <head>
+        <title>Formulario Producto</title>
+        <!-- CSS only -->
+
+    </head>
+
+    <body>
+
+        <form action="/crear_producto/" method="post">
+            <div class="form-row">
+                <div class="col">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <input type="submit" value="Submit">
+                </div>
+                <div class="col">
+                </div>
+            </div>
+        </form>
+
+    </body>
+{% endblock %}
